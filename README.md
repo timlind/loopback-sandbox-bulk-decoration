@@ -1,5 +1,2 @@
-# loopback-sandbox
-
-A repository for reproducing [LoopBack community issues][wiki-issues].
-
-[wiki-issues]: https://github.com/strongloop/loopback/wiki/Reporting-issues
+- [ ] does remote hook load data onto context before operation hook runs?
+- [ ] does the modification to ctx.data in operation loaded hook, affect result of loaded model sent over REST?
