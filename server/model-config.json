@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Favorite": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Member": {
+    "dataSource": "db",
+    "public": true
   }
 }
