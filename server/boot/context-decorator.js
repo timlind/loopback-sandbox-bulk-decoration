@@ -3,7 +3,7 @@ var app = require('../server');
 // this exists here so that the user and related data needed by hooks,
 // is all loaded regardless of which remote method includes the data
 app.remotes().before('**', (ctx, next) => {
-    var Profile = app.models.Profile;
+    var Member = app.models.Member;
     // load the user,
     // when loading the user,
     // also load the user's related data,
@@ -15,7 +15,7 @@ app.remotes().before('**', (ctx, next) => {
         // include the viewer's list of favorites efficiently once here,
         // which will be used to decorate each profile that is sent through the rest api, 
         // regardless of model endpoint the profile is accessed or included via
-        Profile.findById(ctx.req.accessToken.userId, { include: [
+        Member.findById(ctx.req.accessToken.userId, { include: [
                 'favorites'
             ]},
             (e, user) => {
